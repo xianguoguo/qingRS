@@ -17,12 +17,14 @@ public class RecommenderIntro {
 	private PearsonCorrelationSimilarity similarity;
 	private NearestNUserNeighborhood neighborhood;
 	private GenericUserBasedRecommender recommender;
+	private int neighberhoodNum;
 
-	public RecommenderIntro(String filename) throws Exception {
+	public RecommenderIntro(String filename, int num) throws Exception {
+		neighberhoodNum = num;
 		model = new FileDataModel(new File(filename));
 
 		similarity = new PearsonCorrelationSimilarity(model);
-		neighborhood = new NearestNUserNeighborhood(2, similarity, model);
+		neighborhood = new NearestNUserNeighborhood(num, similarity, model);
 
 		recommender = new GenericUserBasedRecommender(model, neighborhood,
 				similarity);
