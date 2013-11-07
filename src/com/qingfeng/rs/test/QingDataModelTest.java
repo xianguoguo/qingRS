@@ -10,7 +10,9 @@ import org.apache.mahout.cf.taste.model.DataModel;
 
 public class QingDataModelTest {
 
+	//private final static String filename = "data/u1m.data";
 	private final static String filename = "data/u.data";
+	
 	private final static int threshold = 20;
 	public static void main(String[] args) throws IOException, TasteException {
 

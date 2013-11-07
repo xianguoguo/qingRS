@@ -9,7 +9,7 @@ import com.qingfeng.rs.intro.RecommenderIntro;
 public class QingRS {
 
 	private RecommenderIntro recommender = null;
-	private static final String filename = "data/u.data";
+	private static final String filename = "data/intro.csv";
 
 	public static void main(String[] args) throws Exception {
 
